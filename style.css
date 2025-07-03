@@ -1,0 +1,106 @@
+ /* style.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5; /* Lighter background */
+}
+
+.navbar {
+    box-shadow: 0 2px 5px rgba(0,0,0,.1); /* Stronger shadow for navbar */
+    background-color: #ffffff !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #007bff !important;
+}
+
+.product-item .card {
+    border: none; /* Remove default card border */
+    border-radius: 10px; /* More rounded corners */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    overflow: hidden; /* Ensures border-radius applies to image */
+}
+
+.product-item .card:hover {
+    transform: translateY(-8px); /* More pronounced lift effect */
+    box-shadow: 0 8px 16px rgba(0,0,0,.15); /* Stronger shadow on hover */
+}
+
+.product-item .card-img-top {
+    height: 180px; /* Fixed height for consistent image display */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    border-top-left-radius: 10px; /* Match card border-radius */
+    border-top-right-radius: 10px; /* Match card border-radius */
+    padding: 10px; /* Add some padding around the image */
+    background-color: #e9ecef; /* Light background for placeholder */
+}
+
+.product-item .card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-title {
+    font-size: 1.15rem; /* Slightly smaller title for card */
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #343a40;
+}
+
+.product-description {
+    font-size: 0.85rem;
+    color: #6c757d;
+    flex-grow: 1; /* Allows description to take available space */
+}
+
+.card-text.fw-bold {
+    font-size: 1.2rem;
+    margin-top: 10px; /* Space above price */
+    margin-bottom: 10px; /* Space below price */
+    color: #28a745; /* Green for price */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Modal specific styles */
+#modal-product-image {
+    max-height: 350px; /* Larger image in modal */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain;
+    border-radius: 8px;
+    background-color: #e9ecef;
+}
+
+#modal-product-title {
+    color: #343a40;
+    font-size: 2rem;
+}
+
+#modal-product-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #28a745;
+}
+
+#modal-product-description p {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments if needed, though Bootstrap handles much */
+@media (max-width: 767.98px) {
+    .product-item .card-img-top {
+        height: 150px;
+    }
+}
